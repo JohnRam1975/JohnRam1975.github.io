@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>John Ram — Portfólio · DeJohn System</title>
+  <meta name="description" content="Portfólio de John Ram: produtos SaaS multi-tenant — ErgoSense, FinCare, CondoPlus, AllOne WMS e MaintenancePro." />
+  <meta name="theme-color" content="#071410" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <header class="top">
+    <a class="brand" href="#topo">John Ram</a>
+    <nav>
+      <a href="#projetos">Projetos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="https://github.com/JohnRam1975" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="topo">
+    <section class="hero">
+      <p class="eyebrow">DeJohn System · Engenharia de produto</p>
+      <h1>John&nbsp;Ram</h1>
+      <p class="lede">
+        Construo plataformas SaaS multi-tenant para operação real:
+        indústria, condomínio, finanças e almoxarifado — com API sólida, PWA e Docker.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn ghost" href="https://github.com/JohnRam1975" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <section id="projetos" class="projects">
+      <header class="section-head">
+        <h2>Projetos</h2>
+        <p>Cinco produtos desenvolvidos ponta a ponta — do domínio à entrega.</p>
+      </header>
+
+      <article class="project" style="--accent:#2dd4a8">
+        <div class="meta">
+          <span class="tag">Indústria · IA</span>
+          <span class="stack">TypeScript · React · Node</span>
+        </div>
+        <h3>ErgoSense</h3>
+        <p>
+          Análise ergonômica industrial com IA, multi-tenant e compliance.
+          Stack React + Node/Express, infraestrutura Docker e documentação de domínio.
+        </p>
+        <a class="link" href="https://github.com/JohnRam1975/ErgoSense" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+
+      <article class="project" style="--accent:#5b8cff">
+        <div class="meta">
+          <span class="tag">Finanças pessoais</span>
+          <span class="stack">Java · Spring · Next.js</span>
+        </div>
+        <h3>FinCare</h3>
+        <p>
+          Saúde financeira pessoal: API Spring Boot, PWA Next.js, PostgreSQL e
+          pipelines de teste de carga com k6.
+        </p>
+        <a class="link" href="https://github.com/JohnRam1975/FinCare" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+
+      <article class="project" style="--accent:#f0b429">
+        <div class="meta">
+          <span class="tag">Condomínios · SaaS</span>
+          <span class="stack">NestJS · React PWA · RLS</span>
+        </div>
+        <h3>CondoPlus</h3>
+        <p>
+          Gestão operacional condominial multi-tenant com NestJS, React PWA,
+          Postgres + Redis e isolamento por RLS.
+        </p>
+        <a class="link" href="https://github.com/JohnRam1975/CondoPlus" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+
+      <article class="project" style="--accent:#ff7a59">
+        <div class="meta">
+          <span class="tag">Almoxarifado · Obras</span>
+          <span class="stack">FastAPI · React · Postgres</span>
+        </div>
+        <h3>AllOne WMS</h3>
+        <p>
+          Almoxarifado multi-empresa com custódia, prova de entrega e assinatura
+          na tela — EPI, insumos e ferramentas para canteiros.
+        </p>
+        <a class="link" href="https://github.com/JohnRam1975/allone-wms" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+
+      <article class="project" style="--accent:#a8e063">
+        <div class="meta">
+          <span class="tag">CMMS · Manutenção</span>
+          <span class="stack">NestJS · React PWA · Docker</span>
+        </div>
+        <h3>MaintenancePro</h3>
+        <p>
+          CMMS multiempresa DeJohn System: ordens de serviço, inspeções, estoque
+          e operação em campo com continuidade offline-friendly.
+        </p>
+        <a class="link" href="https://github.com/JohnRam1975/MaintenancePro" target="_blank" rel="noopener">Ver no GitHub →</a>
+      </article>
+    </section>
+
+    <section id="sobre" class="about">
+      <h2>Sobre</h2>
+      <p>
+        Sou <strong>John Ram</strong>
+        (<a href="https://github.com/JohnRam1975" target="_blank" rel="noopener">@JohnRam1975</a>).
+        Trabalho em produtos B2B com isolamento multi-tenant, APIs tipadas e
+        interfaces PWA pensadas para uso diário em campo e escritório.
+      </p>
+      <p class="note">
+        Os repositórios listados são privados no GitHub; o acesso ao código
+        depende de permissão. Este site é o cartão público do portfólio.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="y"></span> John Ram · DeJohn System</p>
+    <a href="https://github.com/JohnRam1975">github.com/JohnRam1975</a>
+  </footer>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
