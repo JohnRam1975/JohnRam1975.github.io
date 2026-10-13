@@ -330,10 +330,22 @@ footer a:hover { color: var(--brand); }
   .brand span { font-size: 1rem; }
 }
 
+@page {
+  size: A4;
+  margin: 0;
+}
+
 @media print {
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+  }
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: 100% !important;
+    background-color: #000b1e !important;
   }
   .noise, .top nav { display: none !important; }
   .watermark img {
@@ -345,6 +357,13 @@ footer a:hover { color: var(--brand); }
       radial-gradient(900px 520px at 50% 18%, rgba(0, 132, 255, 0.18), transparent 58%),
       linear-gradient(165deg, #000b1e 0%, #001433 48%, #000817 100%) !important;
     color: #e8eef8 !important;
+  }
+  .top, main, footer {
+    padding-left: 18mm !important;
+    padding-right: 18mm !important;
+  }
+  .hero, .projects, .about, .top, footer {
+    box-sizing: border-box;
   }
   .top {
     background: rgba(0, 11, 30, 0.95) !important;
