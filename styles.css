@@ -206,6 +206,13 @@ nav a:hover { color: var(--ink); }
   max-width: 46rem;
 }
 
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: center;
+}
+
 .link {
   color: var(--ink);
   font-weight: 600;
@@ -213,7 +220,48 @@ nav a:hover { color: var(--ink); }
   font-size: 0.95rem;
 }
 
+.link.live {
+  color: var(--accent, #2dd4a8);
+}
+
+.link.secondary {
+  color: var(--muted);
+  font-weight: 500;
+  font-size: 0.88rem;
+}
+
 .link:hover { color: var(--accent, #2dd4a8); }
+
+@media print {
+  .noise, .top nav, .cta .btn.ghost { display: none !important; }
+  body {
+    background: #fff !important;
+    color: #102018 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .top, .hero, .projects, .about, footer {
+    color: inherit;
+  }
+  .project {
+    break-inside: avoid;
+    background: #f4faf7 !important;
+    border-color: #c5ddd2 !important;
+  }
+  .lede, .section-head p, .project p, .stack, .note, footer, .link.secondary {
+    color: #3d564c !important;
+  }
+  .tag, .link.live, .eyebrow, .brand {
+    color: #0a7a5c !important;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.75em;
+    font-weight: 400;
+    color: #5a7268;
+  }
+  .brand::after, .btn::after { content: none !important; }
+}
 
 .about {
   padding: 0 clamp(1.2rem, 4vw, 3rem) 4rem;
