@@ -51,9 +51,10 @@ body {
 
 .watermark img {
   width: min(72vw, 640px);
-  opacity: 0.09;
-  filter: saturate(1.05) contrast(1.05);
+  opacity: 0.14;
+  filter: saturate(1.1) contrast(1.05) drop-shadow(0 0 40px rgba(0, 163, 255, 0.15));
   user-select: none;
+  mix-blend-mode: screen;
 }
 
 .top, main, footer { position: relative; z-index: 1; }
@@ -330,35 +331,49 @@ footer a:hover { color: var(--brand); }
 }
 
 @media print {
-  .noise, .top nav, .cta .btn.ghost { display: none !important; }
-  .watermark img { opacity: 0.06 !important; }
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .noise, .top nav { display: none !important; }
+  .watermark img {
+    opacity: 0.12 !important;
+    mix-blend-mode: normal !important;
+  }
   body {
-    background: #fff !important;
-    color: #0a1628 !important;
-    -webkit-print-color-adjust: exact;
-    print-color-adjust: exact;
+    background:
+      radial-gradient(900px 520px at 50% 18%, rgba(0, 132, 255, 0.18), transparent 58%),
+      linear-gradient(165deg, #000b1e 0%, #001433 48%, #000817 100%) !important;
+    color: #e8eef8 !important;
+  }
+  .top {
+    background: rgba(0, 11, 30, 0.95) !important;
   }
   .project {
     break-inside: avoid;
-    background: #f2f7ff !important;
-    border-color: #c5d6ef !important;
+    background: rgba(0, 18, 42, 0.85) !important;
+    border-color: rgba(192, 214, 255, 0.14) !important;
   }
   .lede, .section-head p, .project p, .stack, .note, footer, .link.secondary {
-    color: #4a5d78 !important;
+    color: #9aadc4 !important;
   }
-  .tag, .link.live, .eyebrow, .brand, .about a {
-    color: #0084ff !important;
+  .tag, .link.live, .eyebrow, .about a {
+    color: #00a3ff !important;
   }
   .hero h1 {
-    background: none;
-    color: #001433 !important;
-    -webkit-text-fill-color: #001433;
+    background: none !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+  }
+  .btn.primary {
+    background: #00a3ff !important;
+    color: #001028 !important;
   }
   a[href]::after {
     content: " (" attr(href) ")";
-    font-size: 0.75em;
+    font-size: 0.72em;
     font-weight: 400;
-    color: #5a6f8c;
+    color: #7a91ad;
   }
-  .brand::after, .btn::after { content: none !important; }
+  .brand::after, .btn::after, .brand img::after { content: none !important; }
 }
